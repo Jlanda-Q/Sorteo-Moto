@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo de Moto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Gran Sorteo de una Moto</h1>
+    </header>
+
+    <main>
+        <section id="moto">
+            <h2>La Moto que Podrías Ganar</h2>
+            <div class="image-slider">
+                <span class="arrow left-arrow" id="prevImage">&lt;</span>
+                <img src="FOTOS/1.png" id="motoImage" alt="Imagen de la moto">
+                <span class="arrow right-arrow" id="nextImage">&gt;</span>
+            </div>
+        </section>
+
+        <section id="boletos">
+            <h2>Compra tus Boletos</h2>
+            <form id="boletosForm">
+                <label for="cantidadBoletos">Selecciona la cantidad de boletos:</label>
+                <select id="cantidadBoletos">
+                    <option value="3">3 boletos - $9,000</option>
+                    <option value="5">5 boletos - $15,000</option>
+                    <option value="10">10 boletos - $30,000</option>
+                    <option value="20">20 boletos - $60,000</option>
+                    <option value="30">30 boletos - $90,000</option>
+                    <option value="50">50 boletos - $150,000</option>
+                    <option value="100">100 boletos - $300,000</option>
+                    <option value="200">200 boletos - $600,000</option>
+                </select>
+                <button type="button" id="comprarBtn">Comprar</button>
+            </form>
+            <div id="paypal-button-container"></div>
+            <p id="totalBoletos">Boletos Vendidos: <span id="boletosVendidos">0</span>/10000</p>
+            <div id="progressContainer">
+                <div id="progressBar"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Sorteo de Moto - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID"></script>
+    <script src="script.js"></script>
+</body>
+</html>
